@@ -31,7 +31,7 @@ export default function Home() {
       <main>
         <Portfolio />
         <PortfolioCharts/>
-        <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+        <Modal isOpen={isModalOpen}>
           <PriceDisplayModal onClose={() => setModalOpen(false)} />
         </Modal>
       </main>
