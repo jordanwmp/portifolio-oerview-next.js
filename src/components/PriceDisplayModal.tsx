@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../redux/store';
-import { addAsset } from '../redux/slices/portfolioSlice';
+import { RootState } from '@/redux/store';
+import { addAsset } from '@/redux/slices/portfolioSlice';
 
 const PriceDisplayModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const prices = useSelector((state: RootState) => state.price);
@@ -17,7 +17,7 @@ const PriceDisplayModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         addAsset({
           id: selectedSymbol,
           name: selectedSymbol.replace('USDT', ''),
-          quantity: 1, // Valor fixo apenas para exemplo
+          quantity: 1, 
           currentPrice: prices[selectedSymbol],
         })
       );
