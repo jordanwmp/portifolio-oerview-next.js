@@ -38,6 +38,8 @@ const PortfolioCharts: React.FC = () => {
     ],
   };
 
+  if(!assets || assets.length == 0) return null
+
   return (
     <div className="portfolio-charts">
       <div className="portfolio-charts__chart portfolio-charts__chart--pie">
