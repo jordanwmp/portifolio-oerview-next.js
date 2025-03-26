@@ -1,0 +1,40 @@
+// Variáveis de cor
+$modal-bg-color: rgba(0, 0, 0, 0.5)
+$modal-content-bg: #fff
+$modal-close-color: #333
+
+// Modal Container
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: $modal-bg-color
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 1000
+
+  &__content
+    background-color: $modal-content-bg
+    border-radius: 8px
+    width: 90%
+    max-width: 500px
+    padding: 1.5rem
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+    position: relative
+
+  &__close
+    position: absolute
+    top: 1rem
+    right: 1rem
+    background: none
+    border: none
+    color: $modal-close-color
+    font-size: 1.25rem
+    cursor: pointer
+    transition: transform 0.2s
+
+    &:hover
+      transform: scale(1.2)

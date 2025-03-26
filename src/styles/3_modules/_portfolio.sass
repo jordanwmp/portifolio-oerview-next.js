@@ -1,0 +1,71 @@
+$table-border: #e0e0e0
+$table-header-bg: #f8f9fa
+$table-row-hover: #f1f1f1
+$title-color: #2c3e50
+$empty-text-color: #7f8c8d
+$button-remove-bg: #e74c3c
+$button-remove-hover: darken($button-remove-bg, 10%)
+$button-remove-text: #fff
+
+
+.portfolio
+  margin: 2rem auto
+  max-width: 1200px
+  padding: 1rem
+
+  &__title
+    color: $title-color
+    font-size: 1.5rem
+    margin-bottom: 1rem
+    text-align: center
+
+  &__table
+    width: 100%
+    border-collapse: collapse
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+
+    th, td
+      padding: 0.75rem
+      text-align: left
+      border: 1px solid $table-border
+
+    thead th
+      background-color: $table-header-bg
+      font-weight: bold
+
+    tbody tr:hover
+      background-color: $table-row-hover
+
+    tbody tr:nth-child(odd)
+      background-color: #fdfdfd
+
+    tbody tr:nth-child(even)
+      background-color: #ffffff
+
+  &__row
+    td:nth-child(3), td:nth-child(4) 
+      text-align: right
+
+  &__empty
+    color: $empty-text-color
+    font-size: 1rem
+    text-align: center
+    margin: 2rem 0
+
+  &__remove-button
+    background-color: $button-remove-bg
+    color: $button-remove-text
+    border: none
+    border-radius: 4px
+    padding: 0.5rem 1rem
+    cursor: pointer
+    font-size: 0.9rem
+    transition: background-color 0.3s ease
+
+    &:hover
+      background-color: $button-remove-hover
+
+  
+  &__table th:last-child, &__table td:last-child
+    text-align: center
+    width: 100px

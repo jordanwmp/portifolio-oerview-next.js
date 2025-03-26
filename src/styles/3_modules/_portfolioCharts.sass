@@ -1,0 +1,24 @@
+.portfolio-charts
+  display: flex
+  flex-wrap: wrap
+  gap: 2rem
+  margin: 2rem auto
+  max-width: 1200px
+
+  &__chart
+    flex: 1 1 calc(50% - 2rem) // 50% da largura para telas grandes
+    min-width: 300px // Tamanho mínimo para telas pequenas
+    max-width: 600px // Largura máxima ideal para gráficos
+    margin: 0 auto // Centraliza os gráficos no contêiner
+
+    .portfolio-charts__title
+      font-size: 1.2rem
+      font-weight: bold
+      text-align: center
+      margin-bottom: 1rem
+
+
+    &--pie
+        max-width: 140px
+
+    &--line
